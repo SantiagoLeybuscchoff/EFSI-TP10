@@ -145,3 +145,26 @@ footer {
 .creacion-info a:hover {
   background-color: #0056b3;
 }
+.creaciones-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.creaciones-column {
+  flex: 0 0 calc(50% - 20px); /* 50% width with 20px spacing between columns */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.home-page .creaciones-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home-page .creacion-card {
+  flex: 0 0 calc(33.33% - 20px); /* 33.33% width with 20px spacing between columns */
+  margin: 10px;
+  box-sizing: border-box;
+}

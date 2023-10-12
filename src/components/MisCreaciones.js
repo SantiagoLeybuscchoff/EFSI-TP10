@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import axios from 'axios';
-import Creacion from './Creacion'; 
+import Creacion from './Creacion';
 
 function MisCreaciones() {
   const [creaciones, setCreaciones] = useState([]);
@@ -20,14 +20,21 @@ function MisCreaciones() {
 
   return (
     <div>
-    <Header/>
+      <Header />
       <h1>Mis Creaciones</h1>
       <div className="creaciones-container">
-        {creaciones.map(creacion => (
-          <Creacion key={creacion.id} creacion={creacion} />
-        ))}
+        <div className="creaciones-column">
+          {creaciones.slice(0, Math.ceil(creaciones.length / 2)).map(creacion => (
+            <Creacion key={creacion.id} creacion={creacion} />
+          ))}
+        </div>
+        <div className="creaciones-column">
+          {creaciones.slice(Math.ceil(creaciones.length / 2)).map(creacion => (
+            <Creacion key={creacion.id} creacion={creacion} />
+          ))}
+        </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

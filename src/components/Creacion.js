@@ -5,7 +5,7 @@ function Creacion({ creacion }) {
   return (
     <div className="creacion-card">
       <div className="creacion-image">
-        <img src={creacion.imagen} alt={creacion.titulo} width="300" height="200"  />
+        <img src={creacion.imagen} alt={creacion.titulo} width="150" height="100"  />
       </div>
       <div className="creacion-info">
         <h2>{creacion.titulo}</h2>

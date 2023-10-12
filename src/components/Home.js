@@ -21,15 +21,15 @@ function Home() {
   }, []);
 
   return (
-<div>
-    <Header/>
-    <h1>Destacados</h1>
+    <div className="home-page"> {/* Agrega una clase para identificar la página Home */}
+      <Header />
+      <h1>Destacados</h1>
       <div className="creaciones-container">
         {creaciones.map(creacion => (
           <Creacion key={creacion.id} creacion={creacion} />
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
