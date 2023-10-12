@@ -6,6 +6,7 @@ import Info from "./components/Info";
 import Favoritos from "./components/Favoritos";
 import MisCreaciones from "./components/MisCreaciones";
 import Contacto from "./components/Contacto";
+import DetalleCreacion from "./components/DetalleCreacion";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/MisCreaciones" element={<MisCreaciones />}></Route>
           <Route path="/Favoritos" element={<Favoritos />}></Route>
           <Route path="/Contacto" element={<Contacto />}></Route>
+          <Route path="/DetalleCreacion/:id" element={<DetalleCreacion />}></Route>
 
         </Routes>
       </BrowserRouter>

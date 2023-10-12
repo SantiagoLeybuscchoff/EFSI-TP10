@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Creacion({ creacion }) {
   return (
@@ -10,7 +11,9 @@ function Creacion({ creacion }) {
         <h2>{creacion.titulo}</h2>
         <p>{creacion.descripcion}</p>
         <p>Fecha: {creacion.fecha}</p>
-        <a href={creacion.url}>Ver más</a>
+        <Link to={`/DetalleCreacion/${creacion.id}`} >
+          Ver más
+        </Link>
       </div>
     </div>
   );
