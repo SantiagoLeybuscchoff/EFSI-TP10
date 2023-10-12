@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "titulo": "Oktubre",
+      "descripcion": "Patricio Rey y sus Redonditos de Ricota",
+      "imagen": "/imagenes/Imagen1.jpg",
+      "fecha": "2023-10-20",
+      "url": "https://ejemplo.com/creacion1"
+    },
+    {
+      "id": 2,
+      "titulo": "Artaud",
+      "descripcion": "Pescado Rabioso",
+      "imagen": "/imagenes/Imagen2.jpg",
+      "fecha": "2023-10-21",
+      "url": "https://ejemplo.com/creacion2"
+    },
+    {
+      "id": 3,
+      "titulo": "Post Mortem",
+      "descripcion": "Dillom",
+      "imagen": "/imagenes/Imagen3.jpg",
+      "fecha": "2023-10-22",
+      "url": "https://ejemplo.com/creacion3"
+    },
+    {
+      "id": 4,
+      "titulo": "Oscuro Éxtasis",
+      "descripcion": "Wos",
+      "imagen": "/imagenes/Imagen4.jpg",
+      "fecha": "2023-10-23",
+      "url": "https://ejemplo.com/creacion4"
+    },
+    {
+      "id": 5,
+      "titulo": "Hecho a mano",
+      "descripcion": "YSY A",
+      "imagen": "/imagenes/Imagen5.jpg",
+      "fecha": "2023-10-24",
+      "url": "https://ejemplo.com/creacion5"
+    },
+    {
+      "id": 6,
+      "titulo": "No es solo rock and roll",
+      "descripcion": "Intoxicados",
+      "imagen": "/imagenes/Imagen6.jpg",
+      "fecha": "2023-10-25",
+      "url": "https://ejemplo.com/creacion6"
+    },
+    {
+      "id": 7,
+      "titulo": "Serotonina",
+      "descripcion": "Khea",
+      "imagen": "/imagenes/Imagen7.jpg",
+      "fecha": "2023-10-26",
+      "url": "https://ejemplo.com/creacion7"
+    },
+    {
+      "id": 8,
+      "titulo": "Muerte",
+      "descripcion": "Cancerbero",
+      "imagen": "/imagenes/Imagen8.jpg",
+      "fecha": "2023-10-27",
+      "url": "https://ejemplo.com/creacion8"
+    },
+    {
+      "id": 9,
+      "titulo": "Clics Modernos",
+      "descripcion": "Charly García",
+      "imagen": "/imagenes/Imagen9.jpg",
+      "fecha": "2023-10-28",
+      "url": "https://ejemplo.com/creacion9"
+    },
+    {
+      "id": 10,
+      "titulo": "Honestidad brutal",
+      "descripcion": "Andrés Calamaro",
+      "imagen": "/imagenes/Imagen10.jpg",
+      "fecha": "2023-10-29",
+      "url": "https://ejemplo.com/creacion10"
+    }
+  ]
+  

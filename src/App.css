@@ -12,27 +12,136 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background-color: #333;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos de contenido en la página principal y otras páginas */
+/* Agrega estilos específicos de página según tus necesidades */
+
+/* Añadir estilos para el menú horizontal */
+.navbar-nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style: none;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+
+/* Estilos de enlaces en el pie de página */
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.creacion-card {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.creacion-card:hover {
+  transform: scale(1.03);
+}
+
+.creacion-image {
+  flex: 40%;
+  padding: 10px;
+  text-align: center;
+}
+
+.creacion-image img {
+  max-width: 100%; /* Establece un tamaño máximo del 100% para que todas las imágenes sean del mismo tamaño */
+  height: auto;
+  border-radius: 5px;
+}
+
+.creacion-info {
+  flex: 60%;
+  padding: 10px;
+}
+
+.creacion-info h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.creacion-info p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.creacion-info a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.creacion-info a:hover {
+  background-color: #0056b3;
 }
