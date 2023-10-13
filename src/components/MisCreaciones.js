@@ -36,7 +36,7 @@ function MisCreaciones() {
       </div>
       <Footer />
     </div>
-  );
+  ); 
 }
 
 export default MisCreaciones;

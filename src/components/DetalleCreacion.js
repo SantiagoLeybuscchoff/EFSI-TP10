@@ -1,31 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-
+import { FavoritosContext } from '../context/FavoritosContext';
 function DetalleCreacion() {
   const { id } = useParams();
-  const [creacion, setCreacion] = useState(null);
-
-  useEffect(() => {
-    // Utiliza la ruta relativa desde la raíz del sitio web
-    axios.get('/creaciones.json')
-      .then(response => {
-        const creacionEncontrada = response.data.find(creacion => creacion.id === id);
-
-        if (creacionEncontrada) {
-          setCreacion(creacionEncontrada);
-        } else {
-          console.error('Creación no encontrada.');
-        }
-      })
-      .catch(error => {
-        console.error('Error al cargar los datos de creaciones:', error);
-      });
-  }, [id]);
+  const { favoritos, agregarAFavoritos, quitarDeFavoritos } = useContext(FavoritosContext);
+  const creacion = favoritos.find((creacion) => creacion.id === parseInt(id, 10));
 
   if (!creacion) {
     return <p>Cargando...</p>;
   }
+
+  const isFavorito = favoritos.some((favorito) => favorito.id === creacion.id);
 
   return (
     <div>
@@ -33,7 +18,11 @@ function DetalleCreacion() {
       <p>{creacion.descripcion}</p>
       <img src={creacion.imagen} alt={creacion.titulo} />
       <p>Fecha: {creacion.fecha}</p>
-    
+      {isFavorito ? (
+        <button onClick={() => quitarDeFavoritos(creacion.id)}>Quitar de Favoritos</button>
+      ) : (
+        <button onClick={() => agregarAFavoritos(creacion)}>Agregar a Favoritos</button>
+      )}
     </div>
   );
 }

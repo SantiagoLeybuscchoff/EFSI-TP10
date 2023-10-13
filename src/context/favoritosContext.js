@@ -9,7 +9,7 @@ const FavoritosProvider = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("")
+      .get("creaciones.json") // Asegúrate de proporcionar la ruta correcta
       .then((response) => {
         setFavoritos(response.data);
         setLoading(false); // Indicar que la carga ha terminado
@@ -20,13 +20,24 @@ const FavoritosProvider = ({ children }) => {
       });
   }, []);
 
+  const agregarAFavoritos = (creacion) => {
+    setFavoritos([...favoritos, creacion]);
+  };
+
+  const quitarDeFavoritos = (id) => {
+    const nuevosFavoritos = favoritos.filter((creacion) => creacion.id !== id);
+    setFavoritos(nuevosFavoritos);
+  };
+
   // Esperar a que la carga de datos termine antes de proporcionar el contexto
   if (loading) {
     return <p>Cargando favoritos...</p>;
   }
 
   return (
-    <FavoritosContext.Provider value={{ favoritos }}>
+    <FavoritosContext.Provider
+      value={{ favoritos, agregarAFavoritos, quitarDeFavoritos }}
+    >
       {children}
     </FavoritosContext.Provider>
   );
