@@ -1,22 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import axios from 'axios';
 import Creacion from './Creacion';
+import { CreacionesContext } from '../context/creacionesContext';
 
 function MisCreaciones() {
-  const [creaciones, setCreaciones] = useState([]);
-
-  useEffect(() => {
-    // Realiza una solicitud Axios para obtener los datos del archivo JSON local
-    axios.get('creaciones.json')
-      .then(response => {
-        setCreaciones(response.data);
-      })
-      .catch(error => {
-        console.error('Error al cargar los datos de creaciones:', error);
-      });
-  }, []);
+  const { creaciones } = useContext(CreacionesContext);
 
   return (
     <div>

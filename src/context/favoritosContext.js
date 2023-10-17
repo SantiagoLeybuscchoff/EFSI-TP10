@@ -5,21 +5,8 @@ export const FavoritosContext = createContext();
 
 const FavoritosProvider = ({ children }) => {
   const [favoritos, setFavoritos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    axios
-      .get("creaciones.json") // Asegúrate de proporcionar la ruta correcta
-      .then((response) => {
-        setFavoritos(response.data);
-        console.log(favoritos)
-        setLoading(false); // Indicar que la carga ha terminado
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false); // Asegurarse de que la carga termine en caso de error
-      });
-  }, []);
   
 
   const agregarAFavoritos = (creacion) => {

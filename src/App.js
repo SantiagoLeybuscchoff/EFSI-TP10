@@ -8,10 +8,12 @@ import MisCreaciones from "./components/MisCreaciones";
 import Contacto from "./components/Contacto";
 import DetalleCreacion from "./components/DetalleCreacion";
 import FavoritosProvider from "./context/favoritosContext";
+import CreacionesProvider from "./context/creacionesContext";
 
 function App() {
   return (
     <>
+    <CreacionesProvider>
     <FavoritosProvider>
       <BrowserRouter>
         <Routes>
@@ -25,6 +27,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </FavoritosProvider>
+    </CreacionesProvider>
 
       
     </>
