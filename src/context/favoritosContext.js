@@ -12,6 +12,7 @@ const FavoritosProvider = ({ children }) => {
       .get("creaciones.json") // Asegúrate de proporcionar la ruta correcta
       .then((response) => {
         setFavoritos(response.data);
+        console.log(favoritos)
         setLoading(false); // Indicar que la carga ha terminado
       })
       .catch((error) => {
@@ -19,6 +20,7 @@ const FavoritosProvider = ({ children }) => {
         setLoading(false); // Asegurarse de que la carga termine en caso de error
       });
   }, []);
+  
 
   const agregarAFavoritos = (creacion) => {
     setFavoritos([...favoritos, creacion]);
@@ -33,6 +35,8 @@ const FavoritosProvider = ({ children }) => {
   if (loading) {
     return <p>Cargando favoritos...</p>;
   }
+
+  
 
   return (
     <FavoritosContext.Provider

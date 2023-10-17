@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { FavoritosContext } from '../context/FavoritosContext';
+import { FavoritosContext } from '../context/favoritosContext';
 function DetalleCreacion() {
   const { id } = useParams();
   const { favoritos, agregarAFavoritos, quitarDeFavoritos } = useContext(FavoritosContext);
   const creacion = favoritos.find((creacion) => creacion.id === parseInt(id, 10));
 
+  //esto esta medio mal, porque cuando borro una creacion de favoritos no me deja entrar al detalleCreacion gracias a esta condicion
   if (!creacion) {
     return <p>Cargando...</p>;
   }
+
+ 
 
   const isFavorito = favoritos.some((favorito) => favorito.id === creacion.id);
 
@@ -16,7 +19,7 @@ function DetalleCreacion() {
     <div>
       <h1>{creacion.titulo}</h1>
       <p>{creacion.descripcion}</p>
-      <img src={creacion.imagen} alt={creacion.titulo} />
+      <img src={creacion.imagen} alt={creacion.titulo} width="750" height="750"/>
       <p>Fecha: {creacion.fecha}</p>
       {isFavorito ? (
         <button onClick={() => quitarDeFavoritos(creacion.id)}>Quitar de Favoritos</button>
