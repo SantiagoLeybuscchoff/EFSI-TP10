@@ -7,18 +7,26 @@ const FavoritosProvider = ({ children }) => {
   const [favoritos, setFavoritos] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  
+  useEffect(() => {
+    const favoritosGuardados = localStorage.getItem("favoritos");
+    if (favoritosGuardados) {
+      setFavoritos(JSON.parse(favoritosGuardados));
+    }
+    setLoading(false); 
+  }, []);
 
   const agregarAFavoritos = (creacion) => {
-    setFavoritos([...favoritos, creacion]);
+    const nuevosFavoritos = [...favoritos, creacion];
+    setFavoritos(nuevosFavoritos);
+    localStorage.setItem("favoritos", JSON.stringify(nuevosFavoritos));
   };
 
   const quitarDeFavoritos = (id) => {
     const nuevosFavoritos = favoritos.filter((creacion) => creacion.id !== id);
     setFavoritos(nuevosFavoritos);
+    localStorage.setItem("favoritos", JSON.stringify(nuevosFavoritos));
   };
 
-  // Esperar a que la carga de datos termine antes de proporcionar el contexto
   if (loading) {
     return <p>Cargando favoritos...</p>;
   }

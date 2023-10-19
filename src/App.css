@@ -73,6 +73,16 @@ footer {
   text-align: center;
 }
 
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1; /* Puedes ajustar esto según tus necesidades */
+}
 
 
 /* Estilos de enlaces en el pie de página */
@@ -96,6 +106,8 @@ footer {
   background-color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  text-decoration: none;
+
 }
 
 .creacion-card:hover {
@@ -120,15 +132,19 @@ footer {
 }
 
 .creacion-info h2 {
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
   color: #333;
+  text-decoration: none;
+
 }
 
 .creacion-info p {
-  font-size: 14px;
+  font-size: 17px;
   color: #777;
   margin: 5px 0;
+  text-decoration: none;
+
 }
 
 .creacion-info a {
@@ -157,14 +173,72 @@ footer {
   box-sizing: border-box;
 }
 
+
+.creacion-card a {
+  text-decoration: none;
+}
+
+/* Eliminar subrayado en hover */
+.creacion-card a:hover {
+  text-decoration: none;
+}
+
+/* Restaurar estilos de los textos h2 y p */
+.creacion-card h2, .creacion-card p {
+  text-decoration: none !;
+}
+
+/* Restaurar estilos en hover para h2 y p */
+.creacion-card h2:hover, .creacion-card p:hover {
+  text-decoration: none;
+}
+
+
 .home-page .creaciones-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
+
 
 .home-page .creacion-card {
   flex: 0 0 calc(33.33% - 20px); /* 33.33% width with 20px spacing between columns */
   margin: 10px;
   box-sizing: border-box;
+}
+.info-content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+  min-height: calc(100vh - 80px);
+}
+
+.info-content h1 {
+  font-size: 36px;
+  color: #007bff;
+}
+
+.info-content p {
+  font-size: 20px;
+  color: #555;
+}
+
+.info-content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.info-content ul {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.info-content li {
+  margin: 10px 0;
 }
