@@ -16,7 +16,7 @@ function Creacion({ creacion }) {
       <div className="creacion-info">
         <h2>{creacion.titulo}</h2>
         <p>{creacion.descripcion}</p>
-        <p>Fecha: {fechaFormateada}</p>
+        <p>{fechaFormateada}</p>
       </div>
     </Link>
   );

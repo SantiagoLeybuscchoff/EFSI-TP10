@@ -33,7 +33,7 @@ function DetalleCreacion() {
       <h1>{creacion.titulo}</h1>
       <p>{creacion.descripcion}</p>
       <img src={creacion.imagen} alt={creacion.titulo} width="750" height="750"/>
-      <p>Fecha: {fechaFormateada}</p>
+      <p>{fechaFormateada}</p>
       {isFavorito ? (
         <button onClick={() => quitarDeFavoritos(creacion.id)}>Quitar de Favoritos</button>
       ) : (
