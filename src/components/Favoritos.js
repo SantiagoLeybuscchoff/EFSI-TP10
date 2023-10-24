@@ -7,7 +7,7 @@ import Creacion from './Creacion';
 export default function Favoritos() {
   //const { favoritos } = useContext(FavoritosContext);
   const favsLocalStorage = localStorage.getItem('favoritos');
-  const favoritos= JSON.parse(favsLocalStorage);
+  const favoritos = favsLocalStorage ? JSON.parse(favsLocalStorage) : [];
   return (
     <div className="home-page" >
     <Header/>
@@ -21,6 +21,7 @@ export default function Favoritos() {
       ) : (
         <h3>No hay favoritos</h3>
       )}
+      
     
     <Footer/>
     </div>

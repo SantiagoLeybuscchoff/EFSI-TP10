@@ -9,7 +9,7 @@ function MisCreaciones() {
   const { creaciones } = useContext(CreacionesContext);
 
   return (
-    <div>
+    <div className="mis-creaciones-container">
       <Header />
       <h1>Mis Creaciones</h1>
       <div className="creaciones-container">
@@ -26,7 +26,8 @@ function MisCreaciones() {
       </div>
       <Footer />
     </div>
-  ); 
+  );
 }
 
 export default MisCreaciones;
+

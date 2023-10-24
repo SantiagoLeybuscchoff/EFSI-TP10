@@ -4,7 +4,7 @@ import { FaStar, FaHome, FaPeopleCarry, FaPencilRuler } from 'react-icons/fa';
 
 const Header = () => {
   const favsLocalStorage = localStorage.getItem('favoritos');
-  const favoritos = JSON.parse(favsLocalStorage);
+  const favoritos = favsLocalStorage ? JSON.parse(favsLocalStorage) : []; 
   return (
     <header style={{ height: '80px' }}>
       <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ marginTop: '-10' }}>
@@ -44,6 +44,7 @@ const Header = () => {
                       {favoritos.length}
                     </span>
                   )}
+                    
                 </div>
               </Link>
             </li>
