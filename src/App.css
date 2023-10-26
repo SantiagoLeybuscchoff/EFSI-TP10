@@ -81,7 +81,7 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
-  z-index: 1; /* Puedes ajustar esto según tus necesidades */
+  z-index: 1; /* Puedes ajmeustar esto según tus necesidades */
 }
 
 
@@ -219,6 +219,12 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   
+  
+}
+
+.home-page{
+  background-color: #E8E8E8;
+
 }
 
 
@@ -310,3 +316,29 @@ footer {
   background-color: #0056b3;
 }
 
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 3rem;           /* Tamaño de fuente */
+  font-weight: bold;         /* Peso de la fuente */
+  color: #3a83d1;            /* Color del texto (naranja) */
+  text-align: center;        /* Alineación de texto al centro */
+  background-color: #262626; /* Color de fondo (gris oscuro) */
+  padding: 10px;             /* Espaciado interno */
+  border-radius: 8px;        /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 2px;       /* Espaciado entre letras */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra del texto */
+  transition: background-color 0.3s ease; /* Transición de color de fondo al pasar el ratón */
+  width: 25%; 
+}
+
+.title:hover {
+  background-color: #3a83d1; /* Cambio de color al pasar el ratón (naranja) */
+  color: #262626;            /* Cambio de color del texto al pasar el ratón (gris oscuro) */
+}

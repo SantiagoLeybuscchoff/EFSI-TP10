@@ -7,9 +7,12 @@ export default function Info() {
     <div>
       <Header />
       <div className="info-content">
+      <div className='title-container'>
+        <h1 className='title'>¿Quienes somos?</h1>
+      </div>
         <h1>Bienvenido a mi Portafolio</h1>
         <p>
-          Nuetro nombre es ChiquIbai y en este portafolio podés encontrar mis mejores covers a los albumes mas míticos y que más me apasionan.
+          Nuestro nombre es ChiquIbai y en este portafolio podés encontrar mis mejores covers a los albumes mas míticos y que más me apasionan.
           Aquí podrás explorar mi experiencia y habilidades en diferentes áreas, como la música y el breakdance.
         </p>
         <h2>Características principales</h2>

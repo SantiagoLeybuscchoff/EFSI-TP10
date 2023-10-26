@@ -14,7 +14,9 @@ function Home() {
   return (
     <div className="home-page"> {/* Agrega una clase para identificar la página Home */}
       <Header />
-      <h1>Destacados</h1>
+      <div className='title-container'>
+        <h1 className='title'>Más destacados</h1>
+      </div>
       <div className="creaciones-container">
        {creaciones.slice(0, 6).map(creacion => (
          <Creacion key={creacion.id} creacion={creacion} />

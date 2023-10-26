@@ -10,20 +10,22 @@ export default function Favoritos() {
   const favoritos = favsLocalStorage ? JSON.parse(favsLocalStorage) : [];
   return (
     <div className="home-page" >
-    <Header/>
-    <h1>Favoritos</h1>
-    {favoritos.length > 0 ? (
-        <div className="creaciones-container">
-        {favoritos.map(favorito => (
-          <Creacion key={favorito.id} creacion={favorito} />
-        ))}
+      <Header />
+      <div className='title-container'>
+        <h1 className='title'>Favoritos</h1>
       </div>
+      {favoritos.length > 0 ? (
+        <div className="creaciones-container">
+          {favoritos.map(favorito => (
+            <Creacion key={favorito.id} creacion={favorito} />
+          ))}
+        </div>
       ) : (
-        <h3>No hay favoritos</h3>
+        <h1>No hay favoritos</h1>
       )}
-      
-    
-    <Footer/>
+
+
+      <Footer />
     </div>
   )
 }

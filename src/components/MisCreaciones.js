@@ -11,7 +11,11 @@ function MisCreaciones() {
   return (
     <div className="mis-creaciones-container">
       <Header />
-      <h1>Mis Creaciones</h1>
+
+      <div className='title-container'>
+        <h1 className='title '>Mis Creaciones</h1>
+      </div>
+      
       <div className="creaciones-container">
         <div className="creaciones-column">
           {creaciones.slice(0, Math.ceil(creaciones.length / 2)).map(creacion => (
